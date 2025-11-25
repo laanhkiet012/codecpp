@@ -1,32 +1,22 @@
-#include <bits/stdc++.h>
-#define ll long long
+#include<bits/stdc++.h>
+
 using namespace std;
-ll tn(ll n){
-    ll s=0;
-    while(n>0){
-        s+=n%10;
-        n/=10;
-    }
-    return s;
-}
-bool ct(ll n){
-    ll t=tn(n);
-    if(t%10==9){
-        return true;
-    }
-    return false;
-}
-int main()
-{
-    freopen("SODEP.INP","r",stdin);
-    freopen("SODEP.OUT","w",stdout);
-    ll n;
-    cin>>n;
-    if(ct(n)){
-        cout<<"1";
-    }
-    else
-        cout<<"0";
-    return 0;
+
+int tong(string &n){
+	int t=0;
+	for(int i=0;i<n.length();i++){
+		char c = n[i];
+		t=(t+(c-48));
+	}
+	return t;
 }
 
+main(){
+	freopen("SODEP.INP", "r", stdin); 
+    freopen("SODEP.OUT", "w", stdout);
+    string n;
+    cin>>n;
+	if(tong(n)%10 == 9)
+	cout<<1;
+	else cout<<0;
+}
