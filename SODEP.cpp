@@ -9,21 +9,15 @@ ll tn(ll n){
     }
     return s;
 }
-bool ct(ll n){
-    ll t=tn(n);
-    if(t%10==9){
-        return true;
-    }
-    return false;
-}
 int main()
 {
     ll n;
     cin>>n;
-    if(ct(n)){
+    if(tn(n)%10==9){
         cout<<"1";
     }
     else
         cout<<"0";
     return 0;
 }
+
