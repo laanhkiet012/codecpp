@@ -9,11 +9,20 @@ ll tn(ll n){
     }
     return s;
 }
+bool ct(ll n){
+    ll t=tn(n);
+    if(t%10==9){
+        return true;
+    }
+    return false;
+}
 int main()
 {
+    freopen("SODEP.INP","r",stdin);
+    freopen("SODEP.OUT","w",stdout);
     ll n;
     cin>>n;
-    if(tn(n)%10==9){
+    if(ct(n)){
         cout<<"1";
     }
     else
